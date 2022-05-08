@@ -19,7 +19,7 @@ export default class JSONGag {
   constructor({
     hash = SHA256,
     salt = "",
-    data,
+    data = {},
   }: JSONGagProps) {
     this.hash = hash;
     this.salt = salt;
