@@ -51,11 +51,25 @@ const jsongag = new JSONGag({
 jsongag.set('<KEY>', __VALUE__)
 ```
 
+#### TypeScript
+
+```typescript
+let __VALUE__: ValueType;
+/* assign value to __VALUE__ */
+jsongag.set<ValueType>('<KEY>', __VALUE__)
+```
+
 ### Get value
 
 ```javascript
 jsongag.get('<KEY>')
 // -> __VALUE__
+```
+
+#### TypeScript
+
+```typescript
+const __VALUE__ = jsongag.get<ValueType>('<KEY>')
 ```
 
 ### Export as JSON string
