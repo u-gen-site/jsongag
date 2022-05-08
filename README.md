@@ -69,3 +69,18 @@ jsongag.set('greet', 'hello world')
 jsongag.toJSON()
 // -> '{"0ba9f954af9e36124b641edc5f574f6f13f3f946602e73213493ecc2ab0bc588":"hello world"}'
 ```
+
+### Change hash function
+
+- JSONGag use SHA256 algorithm by default.
+- To change hash function, you can specify it to constructor.
+
+```typescript
+const jsongag = new JSONGag({
+    salt = "hash salt string",
+    hash = (key: string) => {
+        return sha1(key);
+    }
+    data,
+})
+```
